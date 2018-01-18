@@ -150,7 +150,33 @@ vera.add_time('1.31')
 print(vera.top3())
 vera.add_times(['2.22', '1-21', '2.22'])
 print(vera.top3())
-'''
-总结:
 
-'''
+# 继承: 继承list
+class NameList(list):
+    def __init__(self, a_name):
+        list.__init__([])
+        self.name = a_name
+
+johnny = NameList("John Paul Jones")
+print(type(johnny))
+print(dir(johnny))
+johnny.append('Bass Player')
+johnny.extend(['Composer', 'Arranger', 'Musician'])
+print(johnny)
+print(johnny.name)
+for attr in johnny:
+    print(johnny.name + " is a " + attr + ". ")
+
+class AthleteList(list):
+    def __init__(self, a_name, a_dob=None, a_times=[]):
+        self.name = a_name
+        self.dob = a_dob
+        list.__init__(a_times)
+    def top3(self):
+        return(sorted(set([sanitize(t) for t in self]))[0:3])
+
+vera = AthleteList('Vera Vi')
+vera.append('1.31')
+print(vera.top3())
+vera.extend(['2.22', '1-21', '2:22'])
+print(vera.top3())
