@@ -4,4 +4,6 @@ Python/Head_First_Python/Chapter4/other_data.txt
 Python/Head_First_Python/Chapter4/its.txt    
 Python/Head_First_Python/Chapter4/__pycache__
 Python/Head_First_Python/Chapter7/__pycache__
-Python/Head_First_Python/Chapter7/athletes.pickle
+Python/Head_First_Python/Chapter7/*.pickle
+Python/Head_First_Python/Chapter7/webapp/*.pickle
+Python/Head_First_Python/Chapter7/webapp/cgi-bin/__pycache__
