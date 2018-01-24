@@ -1,11 +1,7 @@
-'''
-第七章 Web开发:集成在一起
-'''
-import os
 import pickle
 from AthleteList import AthleteList
 
-os.chdir('Python/Head_First_Python/Chapter7')
+#os.chdir('Python/Head_First_Python/Chapter7')
 
 def get_coach_data(filename):
     '''
@@ -46,17 +42,3 @@ def get_from_store():
     except IOError as error:
         print("File Error(get_from_store): " + str(error))
     return all_athletes
-
-the_files = ['james.txt','julie.txt','mikey.txt','sarah.txt']
-data = put_to_store(the_files)
-print(data)
-
-'''
-通用网关接口（Common Gateway Interface, CGI）是一个Internet标准，允许Web服务器运行一个服务器程序，称为CGI脚本。
-'''
-from http.server import HTTPServer, CGIHTTPRequestHandler
-
-port = 8080
-httpd = HTTPServer(('',port), CGIHTTPRequestHandler)
-print("Starting simple_httpd on port: "+ str(httpd.server_port))
-httpd.serve_forever()

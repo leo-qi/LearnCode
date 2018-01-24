@@ -49,7 +49,26 @@ def end_form(submit_msg="Submit"):
 
 def radio_button(rb_name, rb_value):
     '''
-    
+    给定一个单选钮名和值，创建一个单选钮
     '''
     return '<input type="radio" name="' + rb_name + '" value="' + rb_value + '">' \
     + rb_value + '<br />'
+
+def u_list(items):
+    '''
+    给定一个列表，转换为HTML无序列表。
+    '''
+    u_string = '<ul>'
+    for item in items:
+        u_string += '<li>' + item + '</li>'
+    u_string += '</ul>'
+    return u_string
+
+def header(header_text, header_level=2):
+    '''
+    返回一个HTML标题标记
+    '''
+    return '<h' + str(header_level) + '>' + header_text + '</h' + str(header_level) + '>'
+
+def para(para_text):
+    return '<p>' + para_text + '</p>'
