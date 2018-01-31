@@ -51,3 +51,13 @@ cursor.execute("""CREATE TABLE timing_data (
     foreign key (athlete_id) references athletes)""")
 connection.commit()
 connection.close()
+
+'''
+查询：
+cursor.execute("Select id from athletes WHERE name=? and dob=?", (name, dob))
+如果查询成功并返回数据，结果会增加到游标。可以在游标上调用多个不同方法来访问结果：
+cursor.fetchone() 返回下一个数据行
+cursor.fetchmany() 返回多个数据行
+cursor.fetchall() 返回所有数据
+
+'''

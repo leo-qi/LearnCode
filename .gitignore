@@ -6,3 +6,4 @@ Python/Head_First_Python/*/__pycache__
 Python/Head_First_Python/*/*.pickle
 Python/Head_First_Python/*/webapp/*.pickle
 Python/Head_First_Python/*/webapp/cgi-bin/__pycache__
+*.sqlite
