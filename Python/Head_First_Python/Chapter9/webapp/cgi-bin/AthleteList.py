@@ -8,6 +8,9 @@ class AthleteList(list):
     def top3(self):
         return sorted(set([sanitize(t) for t in self]))[0:3]
 
+    def clean_data(self):
+        return sorted(set([sanitize(t) for t in self]))
+
 def sanitize(time_string):
     if '-' in time_string:
         splitter = '-'

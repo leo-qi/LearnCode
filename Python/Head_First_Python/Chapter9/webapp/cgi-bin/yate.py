@@ -85,6 +85,10 @@ def create_inputs(inputs_list):
         html_input = html_input + '<input type="text" name="' + each_input + '" size=40 />'
     return html_input
 
+def radio_button_id(rb_name, rb_value, rb_id):
+    return('<input type="radio" name="' + rb_name +
+                             '" value="' + str(rb_id) + '"> ' + rb_value + '<br />')
+                             
 def do_form(name, the_inputs, method="POST", text="Submit"):
     '''
     创建form表单
